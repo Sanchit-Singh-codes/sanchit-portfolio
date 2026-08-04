@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Android App Development for Beginners",
+    "subtitle": "Certificate · Simplilearn",
+    "pdf": "simplilearn-android-beginners.pdf"
+  },
+  {
+    "title": "Modern Android Development Skills",
+    "subtitle": "Certificate · Coursera",
+    "pdf": "coursera-modern-android.jpg"
+  },
+  {
+    "title": "Developing Your First Android Application",
+    "subtitle": "Certificate · IBM Developer",
+    "pdf": "ibm-first-android-app.pdf"
+  },
+  {
+    "title": "Generative AI Internship Offer",
+    "subtitle": "Internship Offer · Prabandhan, IIT Kanpur",
+    "pdf": "iit-kanpur-genai-offer.pdf"
+  },
+  {
+    "title": "Oracle Cloud Infrastructure Data Science",
+    "subtitle": "Professional Certificate · Oracle",
+    "pdf": "oracle-cloud-data-science.pdf"
+  },
+  {
+    "title": "Data Analytics Job Simulation",
+    "subtitle": "Certificate · Deloitte",
+    "pdf": "deloitte-data-analytics.pdf"
+  },
+  {
+    "title": "Mobile Application Developer",
+    "subtitle": "Certificate · L&T EduTech",
+    "pdf": "lnt-mobile-app-developer.pdf"
+  },
+  {
+    "title": "Frontend Developer Internship Offer",
+    "subtitle": "Internship Offer · TechGuru",
+    "pdf": "techguru-frontend-offer.pdf"
+  },
+  {
+    "title": "Kotlin for Android App Development",
+    "subtitle": "Certificate · Coursera",
+    "pdf": "coursera-kotlin-android.jpg"
+  }
+]
