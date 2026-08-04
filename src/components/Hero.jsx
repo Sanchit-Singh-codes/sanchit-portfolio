@@ -1,20 +1,10 @@
-import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 import { profile } from '../data/profile'
-import Starfield from './three/Starfield'
-import Phone3D from './three/Phone3D'
 
 export default function Hero() {
   return (
     <section id="home" className="hero">
-      {/* Full-screen 3D background */}
-      <div className="hero__canvas">
-        <Canvas camera={{ position: [0, 0, 9], fov: 50 }} dpr={[1, 1.8]}>
-          <Starfield />
-          <Phone3D />
-        </Canvas>
-      </div>
-
+      <div className="hero__bg" />
       <div className="hero__overlay" />
 
       <div className="hero__content">

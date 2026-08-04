@@ -180,10 +180,43 @@ section { scroll-margin-top: 70px; }
   justify-content: center;
   overflow: hidden;
 }
-.hero__canvas {
+.hero__bg {
   position: absolute;
   inset: 0;
   z-index: 0;
+  background:
+    radial-gradient(60% 50% at 50% 42%, rgba(124, 77, 255, 0.16), transparent 70%),
+    radial-gradient(40% 40% at 20% 20%, rgba(0, 229, 255, 0.08), transparent 70%),
+    radial-gradient(40% 40% at 80% 25%, rgba(255, 110, 199, 0.07), transparent 70%),
+    radial-gradient(30% 30% at 30% 85%, rgba(0, 229, 255, 0.06), transparent 70%);
+}
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 49.9%, rgba(120, 140, 255, 0.05) 50%, transparent 50.1%),
+    linear-gradient(transparent 49.9%, rgba(120, 140, 255, 0.05) 50%, transparent 50.1%);
+  background-size: 90px 90px;
+  mask-image: radial-gradient(60% 60% at 50% 50%, rgba(0, 0, 0, 0.5), transparent 100%);
+  -webkit-mask-image: radial-gradient(60% 60% at 50% 50%, rgba(0, 0, 0, 0.5), transparent 100%);
+}
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 620px;
+  height: 620px;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(from 0deg, rgba(0, 229, 255, 0.12), rgba(124, 77, 255, 0.12), rgba(255, 110, 199, 0.12), rgba(0, 229, 255, 0.12));
+  filter: blur(80px);
+  border-radius: 50%;
+  animation: slowSpin 26s linear infinite;
+  pointer-events: none;
+}
+@keyframes slowSpin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 .hero__overlay {
   position: absolute;
