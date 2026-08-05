@@ -2,16 +2,16 @@ import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
-function ParticleSwarm({ count = 120 }) {
+function ParticleSwarm({ count = 140 }) {
   const pointsRef = useRef()
 
   const [positions, colors] = useMemo(() => {
     const pos = new Float32Array(count * 3)
     const col = new Float32Array(count * 3)
     const palette = [
-      new THREE.Color('#00e5ff'),
-      new THREE.Color('#7c4dff'),
-      new THREE.Color('#ff6ec7')
+      new THREE.Color('#f0c040'),
+      new THREE.Color('#a78bfa'),
+      new THREE.Color('#f97068')
     ]
 
     for (let i = 0; i < count; i++) {
@@ -100,7 +100,7 @@ export default function AboutScene() {
       innerMeshRef.current.rotation.y = t * 0.3
     }
 
-    // Orbiting Plasma Rings
+    // Orbiting Energy Rings
     if (ring1Ref.current) {
       ring1Ref.current.rotation.x = Math.PI / 3 + Math.sin(t * 0.4) * 0.2
       ring1Ref.current.rotation.y = t * 0.6
@@ -115,12 +115,12 @@ export default function AboutScene() {
   return (
     <group>
       <group ref={groupRef}>
-        {/* Luminous Inner Energy Sphere */}
+        {/* Luminous Inner Core */}
         <mesh ref={innerMeshRef}>
           <icosahedronGeometry args={[1.1, 4]} />
           <meshStandardMaterial
-            color="#7c4dff"
-            emissive="#00e5ff"
+            color="#a78bfa"
+            emissive="#f0c040"
             emissiveIntensity={0.6}
             roughness={0.1}
             metalness={0.9}
@@ -128,13 +128,13 @@ export default function AboutScene() {
           />
         </mesh>
 
-        {/* Outer Faceted Holographic Shell */}
+        {/* Outer Faceted Glass Shell */}
         <mesh ref={coreRef}>
           <icosahedronGeometry args={[1.5, 2]} />
           <meshPhysicalMaterial
-            color="#0d1b3e"
-            emissive="#7c4dff"
-            emissiveIntensity={0.35}
+            color="#141126"
+            emissive="#a78bfa"
+            emissiveIntensity={0.3}
             roughness={0.15}
             metalness={0.8}
             transmission={0.4}
@@ -149,31 +149,31 @@ export default function AboutScene() {
         <mesh ref={outerWireRef} scale={1.08}>
           <icosahedronGeometry args={[1.5, 2]} />
           <meshBasicMaterial
-            color="#00e5ff"
+            color="#f0c040"
             wireframe
             transparent
-            opacity={0.6}
+            opacity={0.5}
           />
         </mesh>
 
-        {/* Plasma Ring 1 */}
+        {/* Energy Ring 1 (Amber) */}
         <mesh ref={ring1Ref}>
           <torusGeometry args={[2.2, 0.035, 16, 100]} />
           <meshStandardMaterial
-            color="#00e5ff"
-            emissive="#00e5ff"
+            color="#f0c040"
+            emissive="#f0c040"
             emissiveIntensity={0.8}
             roughness={0.2}
             metalness={0.8}
           />
         </mesh>
 
-        {/* Plasma Ring 2 */}
+        {/* Energy Ring 2 (Coral) */}
         <mesh ref={ring2Ref}>
           <torusGeometry args={[2.6, 0.025, 16, 100]} />
           <meshStandardMaterial
-            color="#ff6ec7"
-            emissive="#ff6ec7"
+            color="#f97068"
+            emissive="#f97068"
             emissiveIntensity={0.85}
             roughness={0.2}
             metalness={0.8}
@@ -184,11 +184,11 @@ export default function AboutScene() {
         <ParticleSwarm count={140} />
       </group>
 
-      {/* Dynamic Lighting setup */}
+      {/* Warm Dynamic Lighting */}
       <ambientLight intensity={0.4} />
-      <pointLight position={[5, 5, 5]} intensity={2.5} color="#00e5ff" />
-      <pointLight position={[-5, -4, -2]} intensity={2.5} color="#ff6ec7" />
-      <pointLight position={[0, 3, -4]} intensity={1.5} color="#7c4dff" />
+      <pointLight position={[5, 5, 5]} intensity={2.5} color="#f0c040" />
+      <pointLight position={[-5, -4, -2]} intensity={2.5} color="#f97068" />
+      <pointLight position={[0, 3, -4]} intensity={1.5} color="#a78bfa" />
     </group>
   )
 }

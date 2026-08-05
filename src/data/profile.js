@@ -22,14 +22,14 @@ export const profile = {
 }
 
 export const skills = [
-  { name: 'Kotlin', level: 95, color: '#7c4dff' },
-  { name: 'Java', level: 88, color: '#00e5ff' },
-  { name: 'Jetpack Compose', level: 92, color: '#ff6ec7' },
-  { name: 'Firebase', level: 85, color: '#ffb300' },
-  { name: 'REST APIs', level: 90, color: '#69f0ae' },
-  { name: 'MVVM', level: 93, color: '#ff5252' },
-  { name: 'SQLite / Room', level: 87, color: '#ff9e40' },
-  { name: 'Git & GitHub', level: 94, color: '#40c4ff' }
+  { name: 'Kotlin',           level: 95, color: '#f0c040' },
+  { name: 'Java',             level: 88, color: '#a78bfa' },
+  { name: 'Jetpack Compose',  level: 92, color: '#f97068' },
+  { name: 'Firebase',         level: 85, color: '#fbbf24' },
+  { name: 'REST APIs',        level: 90, color: '#34d399' },
+  { name: 'MVVM',             level: 93, color: '#fb923c' },
+  { name: 'SQLite / Room',    level: 87, color: '#c084fc' },
+  { name: 'Git & GitHub',     level: 94, color: '#60a5fa' }
 ]
 
 // GitHub username used to auto-load your public repos
